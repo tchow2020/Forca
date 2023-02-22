@@ -9,10 +9,11 @@
   Faça a contagem de tentativas do seu usuário.
 """
 import os
-palavra_secreta = 'Muquirana'.lower()
+palavra_secreta = 'Vanessa da Mata'.lower()
 letras_acertadas = ''
 
 while True:
+  print('dica:um cantor(a) famoso(a)')
   letra_digitada = str(input('Digite uma letra: '))
 
   if len(letra_digitada) > 1:
@@ -26,7 +27,12 @@ while True:
   for letra_secreta in palavra_secreta:
     if letra_secreta in letras_acertadas:
       palavra_formada += letra_secreta
+    elif letra_secreta == ' ':
+      palavra_formada += ' '
     else:
       palavra_formada += '*'
-  print(f'A palavra secreta é {palavra_formada}')
-    
+  print(f'A palavra secreta é {palavra_formada}\nA palavra secreta tem {len(palavra_secreta)} caracteres')
+
+  if palavra_formada == palavra_secreta:
+    print('Você Ganhou, meus parabéns!')
+    break
