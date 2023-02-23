@@ -8,7 +8,6 @@
   na palavra secreta; exiba *.
   Faça a contagem de tentativas do seu usuário.
 """
-import os
 palavra_secreta = 'Vanessa da Mata'.lower()
 letras_acertadas = ''
 
