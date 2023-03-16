@@ -30,7 +30,9 @@ while True:
       palavra_formada += ' '
     else:
       palavra_formada += '*'
-  print(f'A palavra secreta é {palavra_formada}\nA palavra secreta tem {len(palavra_secreta)} caracteres')
+
+  palavra_secreta_formatada = palavra_formada.replace(' ', '')  
+  print(f'A palavra secreta é {palavra_formada}\nA palavra secreta tem {len(palavra_secreta_formatada)} caracteres')
 
   if palavra_formada == palavra_secreta:
     print('Você Ganhou, meus parabéns!')
